@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: #1976d2;
+  color: white;
+}
+
+button.primary:hover:not(:disabled) {
+  background-color: #1565c0;
+}
+
+button.secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+button.secondary:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.result {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.emi-line {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.emi-line strong {
+  font-size: 20px;
+  color: #2e7d32;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.summary-item {
+  background: #f7f9fb;
+  border: 1px solid #dce4ec;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.summary-item span {
+  display: block;
+  color: #666;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.summary-item strong {
+  color: #2d4059;
+}
+
+.error {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+  text-align: center;
+}
+

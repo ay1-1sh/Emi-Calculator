@@ -1,0 +1,73 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <div class="card">
+    <div class="form-group">
+      <label for="loanAmount">Loan Amount (₹)</label>
+      <input
+        id="loanAmount"
+        type="number"
+        [(ngModel)]="loanAmount"
+        name="loanAmount"
+        placeholder="Enter loan amount"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="yearlyInterestRate">Yearly Interest Rate (%)</label>
+      <input
+        id="yearlyInterestRate"
+        type="number"
+        [(ngModel)]="yearlyInterestRate"
+        name="yearlyInterestRate"
+        placeholder="Enter interest rate (0-100)"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="loanTermYears">Loan Term (years)</label>
+      <input
+        id="loanTermYears"
+        type="number"
+        [(ngModel)]="loanTermYears"
+        name="loanTermYears"
+        placeholder="Enter loan term (0-30)"
+      />
+    </div>
+
+    <div class="buttons">
+      <button class="primary" (click)="onCalculate()" [disabled]="loading">
+        <span *ngIf="loading" class="spinner"></span>
+        {{ loading ? 'Calculating...' : 'Calculate EMI' }}
+      </button>
+      <button class="secondary" type="button" (click)="onReset()" [disabled]="loading">
+        Reset
+      </button>
+    </div>
+
+    <div class="result" *ngIf="emiResult !== null">
+      <p class="emi-line">
+        Monthly EMI: <strong>{{ formatCurrency(emiResult) }}</strong>
+      </p>
+      <div class="summary">
+        <div class="summary-item">
+          <span>Total Months</span>
+          <strong>{{ totalMonths }}</strong>
+        </div>
+        <div class="summary-item">
+          <span>Total Payment</span>
+          <strong>{{ formatCurrency(totalPayment) }}</strong>
+        </div>
+        <div class="summary-item">
+          <span>Total Interest</span>
+          <strong>{{ formatCurrency(totalInterest) }}</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="error" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>
+
