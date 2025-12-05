@@ -10,5 +10,3 @@ public class EmiApplication {
         SpringApplication.run(EmiApplication.class, args);
     }
 }
-
-

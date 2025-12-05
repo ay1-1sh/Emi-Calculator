@@ -25,4 +25,3 @@ export class EmiService {
     return this.http.post<EmiResponse>(`${this.baseUrl}/calculate`, request);
   }
 }
-

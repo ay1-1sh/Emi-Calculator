@@ -21,5 +21,3 @@ public class EmiService {
         return loanAmount * monthlyRate * factor / (factor - 1);
     }
 }
-
-

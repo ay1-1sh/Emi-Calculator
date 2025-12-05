@@ -29,5 +29,3 @@ public class EmiResponse {
         this.message = message;
     }
 }
-
-

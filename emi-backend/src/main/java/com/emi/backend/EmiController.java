@@ -50,5 +50,3 @@ public class EmiController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
     }
 }
-
-

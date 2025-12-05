@@ -35,5 +35,3 @@ class EmiServiceTest {
         assertEquals(10_000, emi, 0.0001);
     }
 }
-
-

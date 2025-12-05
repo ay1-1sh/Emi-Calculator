@@ -44,5 +44,3 @@ public class EmiRequest {
         this.loanTermYears = loanTermYears;
     }
 }
-
-
