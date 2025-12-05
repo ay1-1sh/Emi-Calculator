@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Emi-Calculator
+ Emi-Calculator
 =======
 # EMI Calculator (Spring Boot backend, Angular frontend)
 
